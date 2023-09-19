@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1_godigital/model.dart';
 
-class FirstAssignment extends StatelessWidget {
-  dataModel? data;
+class FirstAssignment extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _FirstAssignmentState();}
+
+  
+class _FirstAssignmentState extends State<StatefulWidget>{
+  @override
+  Widget build(BuildContext context) {
+      dataModel? data;
   final List<String> imageUrls = [
     'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*sPQ1zOvTO7-DN2t25xMRsA.jpeg',
     'https://plus.unsplash.com/premium_photo-1690749741490-27dd0d8db22c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
     'https://images.unsplash.com/photo-1526818655834-d62a36fda59f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
     'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*sPQ1zOvTO7-DN2t25xMRsA.jpeg',
   ];
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -107,4 +111,6 @@ class FirstAssignment extends StatelessWidget {
       ),
     );
   }
+  
+
 }
